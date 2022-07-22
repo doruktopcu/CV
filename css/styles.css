@@ -1,0 +1,23 @@
+  body {
+    background-color: #E7F6F2;
+  }
+
+  hr {
+    border-color: #22577A;
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 10px;
+    width: 12%;
+  }
+
+  h1, h2, h3, h4 {
+
+    border-style: none;
+    color: #38A3A5;
+  }
+
+  table {
+    border-style:inset;
+    border-color: #1A374D;
+    background-color: #E6E6E6;
+  }
