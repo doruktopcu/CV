@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="dtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="100%" stop-color="#7F00FF"/>
+    </linearGradient>
+    <filter id="dtGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Square with Gradient Border -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0B0F19" stroke="url(#dtGrad)" stroke-width="3" />
+  
+  <!-- Inner Subtle Glow Box -->
+  <rect x="6" y="6" width="52" height="52" rx="10" fill="url(#dtGrad)" fill-opacity="0.15" />
+
+  <!-- Monogram Text "DT" -->
+  <text x="32" y="43" 
+        font-family="'Plus Jakarta Sans', 'Outfit', 'Inter', system-ui, sans-serif" 
+        font-weight="900" 
+        font-size="28" 
+        fill="#FFFFFF" 
+        text-anchor="middle" 
+        letter-spacing="-1.5"
+        filter="url(#dtGlow)">DT</text>
+</svg>
