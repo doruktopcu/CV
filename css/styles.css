@@ -1091,17 +1091,18 @@ h1, h2, h3, h4, h5, h6 {
    10. CONTACT SECTION & FOOTER
    -------------------------------------------------------------------------- */
 .contact-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 3rem;
-  align-items: start;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-info-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 2.25rem;
+  width: 100%;
+  max-width: 560px;
+  backdrop-filter: var(--backdrop-blur);
 }
 
 .contact-item {

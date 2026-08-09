@@ -31,8 +31,7 @@ Then visit `http://localhost:8000`.
 
 ---
 
-## 📄 License & Contact
+## 📄 Social Links
 
-- **Email**: [doruktopcu5@gmail.com](mailto:doruktopcu5@gmail.com)
 - **LinkedIn**: [linkedin.com/in/doruktopcu](https://www.linkedin.com/in/doruktopcu/)
 - **GitHub**: [github.com/doruktopcu](https://github.com/doruktopcu)

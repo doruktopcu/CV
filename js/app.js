@@ -661,8 +661,7 @@ class CommandPalette {
       { name: "Jump to Experience & Education", anchor: "#timeline", icon: "fa-briefcase" },
       { name: "Jump to Interactive Projects", anchor: "#projects", icon: "fa-code-branch" },
       { name: "Jump to Skills Matrix", anchor: "#skills", icon: "fa-layer-group" },
-      { name: "Jump to Certifications Gallery", anchor: "#certifications", icon: "fa-certificate" },
-      { name: "Jump to Contact", anchor: "#contact", icon: "fa-envelope" }
+      { name: "Jump to Certifications Gallery", anchor: "#certifications", icon: "fa-certificate" }
     ];
 
     sections.forEach(s => {
@@ -764,13 +763,7 @@ function setupBibtexModal() {
 }
 
 function setupCopyEmail() {
-  const copyEmailBtn = document.getElementById('btn-copy-email');
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText("doruktopcu5@gmail.com");
-      showToast("Email address copied to clipboard!");
-    });
-  }
+  // Contact section disabled
 }
 
 // Toast Notifications
