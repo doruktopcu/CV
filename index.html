@@ -1,220 +1,591 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
-  <title>Doruk's Personal Site</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doruk Topcu | PhD Candidate, ML Researcher & Full-Stack QA Lead</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Doruk Topcu - PhD Candidate in Computer Engineering at Hacettepe University, Machine Learning & Bioinformatics Researcher, AWS Machine Learning Specialist, and Full-Stack QA Lead.">
+  <meta name="keywords" content="Doruk Topcu, Machine Learning, Bioinformatics, Hacettepe University, PhD, ASAP-ML, IEEE TCBB, AWS Machine Learning Specialty, QA Lead, Full Stack Developer">
+  <meta name="author" content="Doruk Topcu">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Doruk Topcu | Portfolio & Interactive CV">
+  <meta property="og:description" content="PhD Candidate in Computer Engineering, ML & Bioinformatics Researcher, and AWS Machine Learning Specialist.">
+  <meta property="og:image" content="images/profile-picture.jpeg">
+
+  <!-- Favicon -->
   <link rel="icon" href="images/DT.ico">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Structured JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Doruk Topcu",
+    "jobTitle": "Computer Engineering PhD Candidate & ML Researcher",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Flatiron Software"
+    },
+    "almaMater": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Hacettepe University"
+      }
+    ],
+    "sameAs": [
+      "https://github.com/doruktopcu",
+      "https://www.linkedin.com/in/doruktopcu/"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div class="main-container">
+  <!-- Dynamic Constellation Canvas & Ambient Lighting -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
 
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div class="logo-badge">DT</div>
+        <span>Doruk Topcu</span>
+      </a>
 
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link active">About</a></li>
+          <li><a href="#publication" class="nav-link">Publication</a></li>
+          <li><a href="#timeline" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-    <div class="profile-section">
-      <img class="profile-img" src="images/profile-picture.jpeg" alt="Doruk Topcu Profile">
-      <div class="profile-text">
-        <h1>Doruk Topcu</h1>
-        <p><em>Computer Engineering PhD Student at <strong><a href="https://www.cs.hacettepe.edu.tr/">Hacettepe
-                University</strong></a></em></p>
-        <p><em><strong><a href="https://www.linkedin.com/in/doruktopcu/">LinkedIn</strong></a></em></p>
-        <p><em><strong><a href="https://github.com/doruktopcu">Github</strong></a></em></p>
+      <div class="nav-actions">
+        <button id="cmd-trigger-btn" class="btn btn-secondary" title="Search (Ctrl + K)">
+          <i class="fas fa-search"></i>
+          <span style="font-size: 0.8rem; opacity: 0.7; font-family: var(--font-mono); margin-left: 0.25rem;">⌘K</span>
+        </button>
+        <button id="theme-toggle-btn" class="btn btn-icon" title="Toggle Light/Dark Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary">Contact</a>
       </div>
     </div>
-    <hr>
+  </header>
 
+  <!-- Main Content Wrapper -->
+  <main>
 
-    <h2>Education</h2>
-    <h3>Ankara Anadolu Lisesi</h3>
-    <ul>
-      <li>
-        2011-2014
-      </li>
-    </ul>
-    <h3>Jale Tezer Anadolu Lisesi</h3>
-    <ul>
-      <li>
-        2014-2015
-      </li>
-    </ul>
-    <h3>Hacettepe University, Mathematics BSc</h3>
-    <ul>
-      <li>
-        2015-2021, Honours Degree
-      </li>
-    </ul>
-    <h3>Hacettepe University, Computer Engineering MSc</h3>
-    <ul>
-      <li>
-        2022-2025, Thesis: Antimicrobial Resistance Prediction with ML
-      </li>
-    </ul>
-    <h3>Hacettepe University, Computer Engineering PhD</h3>
-    <ul>
-      <li>
-        2025-2029 (Expected)
-      </li>
-    </ul>
-    <h3>Anadolu University, Computer Programming</h3>
-    <ul>
-      <li>
-        Graduated Jun 2024
-      </li>
-    </ul>
-    <hr>
+    <!-- 1. HERO SECTION -->
+    <section id="about" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Hi, I'm <span>Doruk Topcu</span>
+            </h1>
 
-    <h3>Work Experience</h3>
+            <div class="hero-typewriter">
+              <span id="typewriter-text"></span>
+            </div>
 
-    <table class="content-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Work</th>
-        </tr>
-      </thead>
+            <p class="hero-description">
+              Computer Engineering PhD candidate at <strong>Hacettepe University</strong> specializing in Machine Learning, Bioinformatics, and Computer Vision. IEEE published researcher with extensive full-stack QA leadership & LLM platform scaling experience.
+            </p>
 
-      <tbody>
-        <tr>
-          <td>10/2015 - 10/2018</td>
-          <td>Gizli Kalite Kontroloru</td>
-        </tr>
-        <tr>
-          <td>11/2018 - 01/2019</td>
-          <td>Maraton Akademi - Math Teacher (Elementary and High School)</td>
-        </tr>
-        <tr>
-          <td>03/2018-10/2019</td>
-          <td>Ankara Gozetmen Kurulu - Motorsports Marshal</td>
-        </tr>
-        <tr>
-          <td>06/2019-09/2019</td>
-          <td>Cafe Sabour - Waiter/Bartender/Manager (Work and Travel Program)</td>
-        </tr>
-        <tr>
-          <td>09/2022 - Present</td>
-          <td>Snapshot AI - Scrum Master & QA</td>
-        </tr>
+            <div class="hero-cta">
+              <a href="#publication" class="btn btn-primary">
+                <i class="fas fa-file-alt"></i> IEEE TCBB Paper
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                <i class="fas fa-code-branch"></i> Explore 50+ Repos
+              </a>
+              <button id="btn-copy-email" class="btn btn-secondary">
+                <i class="fas fa-copy"></i> Copy Email
+              </button>
+            </div>
 
-      </tbody>
-    </table>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-value">50+</span>
+                <span class="stat-label">GitHub Repos</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">28+</span>
+                <span class="stat-label">Certifications</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">IEEE</span>
+                <span class="stat-label">Journal Published</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">17</span>
+                <span class="stat-label">Scrum Team Size</span>
+              </div>
+            </div>
+          </div>
 
-    <hr>
+          <div class="hero-visual">
+            <div class="profile-card">
+              <div class="profile-avatar-wrapper">
+                <div class="profile-avatar-glow"></div>
+                <img src="images/profile-picture.jpeg" alt="Doruk Topcu Profile" class="profile-avatar-img">
+              </div>
+              <div class="profile-badge">
+                <i class="fas fa-graduation-cap"></i> PhD Candidate
+              </div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center;">
+                Ankara, Turkey
+              </div>
+            </div>
+          </div>
 
-    <h3>Skills</h3>
+        </div>
+      </div>
+    </section>
 
-    <table class="content-table">
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Skills</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Languages</td>
-          <td>Python, JavaScript, TypeScript, C++, HTML, CSS, SQL</td>
-        </tr>
-        <tr>
-          <td>Web Frameworks</td>
-          <td>NextJS, NestJS, React</td>
-        </tr>
-        <tr>
-          <td>Cloud & Tools</td>
-          <td>AWS, Git, Github, Jira, Postman, Figma, Docker</td>
-        </tr>
-        <tr>
-          <td>Concepts</td>
-          <td>GraphQL, Data Analysis, Machine Learning, Agile/Scrum</td>
-        </tr>
-      </tbody>
-    </table>
-    <hr>
+    <!-- 2. FEATURED PUBLICATION SPOTLIGHT -->
+    <section id="publication" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Publication</h2>
+          <p class="section-subtitle">Journal paper published in IEEE Transactions on Computational Biology and Bioinformatics</p>
+        </div>
 
-    <h3>Certifications</h3>
-    <table class="content-table">
-      <thead>
-        <tr>
-          <th>Provider</th>
-          <th>Certificate</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Amazon Web Services (AWS)</td>
-          <td>
-            AWS Certified Machine Learning – Specialty<br>
-            AWS Certified Solutions Architect – Associate<br>
-            AWS Partner: Generative AI Essentials<br>
-            AWS Certified Cloud Practitioner
-          </td>
-        </tr>
-        <tr>
-          <td>Coursera</td>
-          <td>
-            Meta Front-End Development<br>
-            Meta Programming with JavaScript<br>
-            Machine Learning by Andrew Ng
-          </td>
-        </tr>
-        <tr>
-          <td>BTK Akademi</td>
-          <td>
-            API and API Testing<br>
-            Python and Tensorflow for Data Science<br>
-            Introduction to NLP<br>
-            AI Bootcamp
-          </td>
-        </tr>
-        <tr>
-          <td>DataCamp</td>
-          <td>
-            Image Processing with Python<br>
-            Building Recommendation Engines in Python
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <hr>
+        <div class="pub-card">
+          <div class="pub-header">
+            <span class="pub-journal-tag">
+              <i class="fas fa-newspaper"></i> IEEE TCBB (Jan-Feb 2026)
+            </span>
+            <span class="pub-date">Vol. 23, No. 1, pp. 65-74 · PMID: 41247898</span>
+          </div>
 
-    <h3>Current Studies</h2>
-      <p>
-        At this moment I am interested in web development and in the field of machine learning.
-      </p>
-      <hr>
+          <h3 class="pub-title">
+            ASAP-ML: Antibiotic Susceptibility and Antibiogram Prediction With Machine Learning Methods
+          </h3>
 
-      <h3>Known Programming Languages</h3>
-      <ul>
-        <li>Python (Intermediate)</li>
-        <li>C++ (Advanced Beginner)</li>
-        <li>HTML (Learning)</li>
-        <li>C (Learning)</li>
+          <div class="pub-authors">
+            <strong>Doruk Topcu</strong>, Ebru Akcapinar Sezer
+          </div>
+
+          <div class="pub-abstract">
+            <strong>Abstract:</strong> Antimicrobial resistance (AMR) poses a global threat to public health. This study presents ASAP-ML, a comprehensive machine learning framework evaluating 10 classification algorithms across multi-source pathogen resistance datasets (ARDB, CARD, NCBI Pathogen Browser). The framework provides accurate predictions for antibiotic susceptibility patterns and automated antibiogram generation to accelerate clinical decision-making.
+          </div>
+
+          <div class="pub-actions">
+            <a href="https://doi.org/10.1109/TCBBIO.2025.3634090" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <i class="fas fa-external-link-alt"></i> Read IEEE Article
+            </a>
+            <button id="btn-bibtex" class="btn btn-secondary">
+              <i class="fas fa-quote-right"></i> BibTeX Citation
+            </button>
+            <a href="https://github.com/doruktopcu/ASAP-Antibiotic-Susceptibility-and-Antibiogram-Prediction" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <i class="fab fa-github"></i> Code Repository
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. DUAL TIMELINE (EXPERIENCE & EDUCATION) -->
+    <section id="timeline" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Career & Education</h2>
+          <p class="section-subtitle">Academic research milestones and software engineering leadership</p>
+        </div>
+
+        <div class="timeline-tabs">
+          <button class="tab-btn active" data-target="experience">Work Experience</button>
+          <button class="tab-btn" data-target="education">Education</button>
+        </div>
+
+        <!-- Experience Timeline -->
+        <div id="timeline-experience" class="timeline-container">
+          
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Sep 2022 – Present</span>
+              <h3 class="timeline-role">QA Lead & Scrum Master (Former Founding Dev)</h3>
+              <div class="timeline-org">Flatiron Software — Full-time</div>
+              <ul class="timeline-bullets">
+                <li>Founding core team member on Snapshot AI (Sep 2022 – Jun 2026), building full-stack data ingestion pipelines connecting Git repositories and project management systems into LLM RAG models.</li>
+                <li>Grew into QA Lead, directing release quality, defect triage, and automated testing strategy across the platform lifecycle.</li>
+                <li>Served as Scrum Master (2025–2026), managing sprint execution for a cross-functional engineering team that scaled to 17 members.</li>
+                <li>Led live customer demos, gathering feedback and orchestrating targeted integration features.</li>
+              </ul>
+              <div class="tag-container">
+                <span class="tag">QA Leadership</span>
+                <span class="tag">Scrum Master</span>
+                <span class="tag">NestJS</span>
+                <span class="tag">GraphQL</span>
+                <span class="tag">LLM RAG</span>
+                <span class="tag">AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Mar 2018 – Oct 2019</span>
+              <h3 class="timeline-role">Motorsports Marshal</h3>
+              <div class="timeline-org">Ankara Gözetmen Kurulu</div>
+              <ul class="timeline-bullets">
+                <li>Managed racetrack safety logistics, quick incident response, and signal communication during official motorsport championship events.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Education Timeline (Hidden by default) -->
+        <div id="timeline-education" class="timeline-container" style="display: none;">
+          
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Sep 2025 – Jun 2029 (Expected)</span>
+              <h3 class="timeline-role">Doctor of Philosophy (PhD) — Computer Engineering</h3>
+              <div class="timeline-org">Hacettepe University</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                Research Focus: Computer vision, cooperative vehicle perception, biomedical AI, and LLM architectures.
+              </p>
+              <div class="tag-container">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Cooperative Perception</span>
+                <span class="tag">Biomedical AI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Feb 2022 – Jan 2025</span>
+              <h3 class="timeline-role">Master of Science (MS) — Computer Engineering</h3>
+              <div class="timeline-org">Hacettepe University (Honours Degree)</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                Thesis: <em>Antimicrobial Resistance Prediction in Pathogens with Machine Learning</em>. Benchmark of 10 classification algorithms across ARDB, CARD, and NCBI Pathogen Browser databases.
+              </p>
+              <div class="tag-container">
+                <span class="tag">ML Thesis</span>
+                <span class="tag">Bioinformatics</span>
+                <span class="tag">IEEE Published</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Oct 2022 – Jun 2024</span>
+              <h3 class="timeline-role">Computer Programming (Önlisans / Associate Degree)</h3>
+              <div class="timeline-org">Anadolu University</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                Design patterns, object-oriented software engineering, database design, and web architecture.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">Sep 2015 – Jan 2021</span>
+              <h3 class="timeline-role">Bachelor of Science (BS) — Mathematics</h3>
+              <div class="timeline-org">Hacettepe University (Honours Degree, 3.00 GPA)</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                Advanced linear algebra, differential equations, probability, numerical analysis. Player on Hacettepe Red Deers American Football Team (2015-2016).
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. INTERACTIVE PROJECTS MATRIX -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects Showcase</h2>
+          <p class="section-subtitle">Explore 50+ repositories across AI research, computer vision, web applications, and IoT</p>
+        </div>
+
+        <div class="projects-controls">
+          <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="project-search" class="search-input" placeholder="Search by keyword, tool, or domain (e.g. LLM, Vision, AWS)...">
+          </div>
+
+          <div class="project-filter-tabs">
+            <button class="filter-chip active" data-category="all">All Projects</button>
+            <button class="filter-chip" data-category="bioinformatics">ML & Bioinformatics</button>
+            <button class="filter-chip" data-category="vision">Vision & Perception</button>
+            <button class="filter-chip" data-category="web">Web & Full-Stack</button>
+            <button class="filter-chip" data-category="iot">IoT & Simulation</button>
+            <button class="filter-chip" data-category="security">Security & Games</button>
+          </div>
+        </div>
+
+        <div id="projects-grid" class="projects-grid">
+          <!-- Populated dynamically by js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SKILLS MATRIX & CERTIFICATIONS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Skills & Certifications</h2>
+          <p class="section-subtitle">Technical domain expertise and 28+ verified industry certifications</p>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+          <div class="skill-category-card">
+            <div class="skill-cat-title"><i class="fas fa-code"></i> Programming Languages</div>
+            <div class="tag-container">
+              <span class="tag">Python (Advanced)</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">C++</span>
+              <span class="tag">SQL</span>
+              <span class="tag">HTML5/CSS3</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="skill-cat-title"><i class="fas fa-brain"></i> Machine Learning & AI</div>
+            <div class="tag-container">
+              <span class="tag">PyTorch</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">LLM RAG</span>
+              <span class="tag">Scikit-Learn</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Bioinformatics</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="skill-cat-title"><i class="fas fa-cloud"></i> Cloud & Infrastructure</div>
+            <div class="tag-container">
+              <span class="tag">AWS ML Specialty</span>
+              <span class="tag">AWS Solutions Architect</span>
+              <span class="tag">Google Cloud Digital Leader</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Git & GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="skill-cat-title"><i class="fas fa-laptop-code"></i> Web Frameworks & Tools</div>
+            <div class="tag-container">
+              <span class="tag">Next.js</span>
+              <span class="tag">NestJS</span>
+              <span class="tag">React</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">Postman</span>
+              <span class="tag">Jira</span>
+              <span class="tag">Scrum Master</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications Showcase -->
+        <div style="margin-top: 3rem;">
+          <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.5rem;">
+            Featured Industry Certifications
+          </h3>
+          <div id="certifications-grid" class="certifications-grid">
+            <!-- Populated dynamically by js/app.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. HOBBIES & PERSONAL INTERESTS -->
+    <section id="hobbies" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Beyond the Code</h2>
+          <p class="section-subtitle">Sports, community leadership, and personal passions</p>
+        </div>
+
+        <div class="hobbies-grid">
+          <div class="hobby-card">
+            <span class="hobby-icon">🏈</span>
+            <h3>American Football</h3>
+            <p>Former active player for Hacettepe Red Deers (2015–2016). Teamwork, discipline, and high-intensity strategy.</p>
+          </div>
+
+          <div class="hobby-card">
+            <span class="hobby-icon">🏎️</span>
+            <h3>Motorsports Marshal</h3>
+            <p>Official marshal for Ankara Gözetmen Kurulu, managing track safety and race communications during rally and circuit events.</p>
+          </div>
+
+          <div class="hobby-card">
+            <span class="hobby-icon">🧘‍♂️</span>
+            <h3>Breathwork & Wellness</h3>
+            <p>Developer of <em>DerinBirNefes</em>, combining respiratory research into digital mindfulness tools.</p>
+          </div>
+
+          <div class="hobby-card">
+            <span class="hobby-icon">🐾</span>
+            <h3>Pet Care & Rescue</h3>
+            <p>Creator of <em>Sahiplendir</em> pet adoption platform and daily pet schedule reminders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Let's discuss academic research, engineering opportunities, or collaborations</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="contact-label">Direct Email</div>
+                <div class="contact-value">doruktopcu5@gmail.com</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">+90 542 133 8397</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="contact-label">Location & Status</div>
+                <div class="contact-value">Ankara, Turkey</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-globe"></i></div>
+              <div>
+                <div class="contact-label">Languages</div>
+                <div class="contact-value">English (Fluent / Band 7), Turkish (Native), German (Beginner)</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <button id="btn-copy-email-2" onclick="navigator.clipboard.writeText('doruktopcu5@gmail.com'); showToast('Email copied!');" class="btn btn-primary" style="width: 100%;">
+                <i class="fas fa-copy"></i> Copy Email Address
+              </button>
+            </div>
+          </div>
+
+          <form class="contact-form" onsubmit="event.preventDefault(); showToast('Message feature ready! Reach out directly via email.');">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" class="form-input" placeholder="e.g. Dr. Alex Vance" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" class="form-input" placeholder="name@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-input" placeholder="Discuss a project, paper, or opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://github.com/doruktopcu" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/doruktopcu/" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:doruktopcu5@gmail.com" class="social-link" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <p>© 2026 Doruk Topcu. Crafted with high-performance Vanilla Web Tech for GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <!-- COMMAND PALETTE MODAL (CTRL + K) -->
+  <div id="cmd-palette-modal" class="modal-backdrop">
+    <div class="modal-content">
+      <button id="cmd-modal-close" class="modal-close">&times;</button>
+      <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Quick Search Command Palette</h3>
+      <input type="text" id="cmd-palette-input" class="cmd-palette-input" placeholder="Type to search projects, skills, paper, or jump to section...">
+      <ul id="cmd-palette-results" class="cmd-palette-results">
+        <!-- Search results injected dynamically -->
       </ul>
-      <hr>
-
-
-
-      <div class="footer-section">
-        <strong>The End</strong>
-      </div>
-
-      <hr>
-
-
-      <div class="links">
-        <a href='contact-me.html'>Contact Me</a>
-        <a href='hobbies.html'>My Hobbies</a>
-      </div>
-
-
+    </div>
   </div>
+
+  <!-- BIBTEX CITATION MODAL -->
+  <div id="bibtex-modal" class="modal-backdrop">
+    <div class="modal-content">
+      <button id="bibtex-modal-close" class="modal-close">&times;</button>
+      <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">IEEE TCBB 2026 BibTeX Citation</h3>
+      <pre id="bibtex-code" style="background: rgba(0, 0, 0, 0.3); padding: 1rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan); overflow-x: auto; white-space: pre-wrap; margin-bottom: 1.5rem;"></pre>
+      <button id="btn-copy-bibtex" class="btn btn-primary">
+        <i class="fas fa-copy"></i> Copy Citation
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/app.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,38 @@
-# MyWebsite
+# Doruk Topcu - Interactive CV & Portfolio Hub
 
-https://doruktopcu.github.io/CV/
+> **Computer Engineering PhD Candidate @ Hacettepe University** | **ML & Bioinformatics Researcher** | **AWS Machine Learning Specialist** | **Full-Stack QA Lead**
+
+Welcome to my personal interactive portfolio and academic CV page, optimized for GitHub Pages.
+
+---
+
+## 🌟 Key Features
+
+- **Cybernetic Glassmorphism Design System**: Modern dark theme default with glowing gradients, interactive constellation particle canvas background, and backdrop blur glass cards.
+- **Theme Switcher**: Instant dark/light mode toggle with preference persistence.
+- **Command Palette (`Ctrl + K` / `Cmd + K`)**: Instant search overlay allowing visitors to search across projects, skills, certifications, and publications.
+- **Featured Journal Publication**: IEEE TCBB 2026 paper (*ASAP-ML: Antibiotic Susceptibility and Antibiogram Prediction With Machine Learning Methods*) with DOI links and one-click BibTeX citation copy.
+- **Dual Interactive Timeline**: Switch seamlessly between Work Experience (Flatiron Software QA Lead & Scrum Master) and Academic Degrees (PhD, MS, Associate Degree, Mathematics BS).
+- **Categorized Projects Showcase**: Real-time keyword search and category filtering for 50+ personal GitHub projects (Bioinformatics, Vision & Perception, Web & Full-Stack, IoT, Security & Games).
+- **28+ Industry Certifications Gallery**: AWS Machine Learning Specialty, Claude Certified Architect, Google Cloud Digital Leader, AWS Solutions Architect Associate, Meta Front-End, and more.
+
+---
+
+## 🚀 Local Preview
+
+Simply open `index.html` in any modern browser or run a lightweight local HTTP server:
+
+```bash
+# Python local server
+python -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+---
+
+## 📄 License & Contact
+
+- **Email**: [doruktopcu5@gmail.com](mailto:doruktopcu5@gmail.com)
+- **LinkedIn**: [linkedin.com/in/doruktopcu](https://www.linkedin.com/in/doruktopcu/)
+- **GitHub**: [github.com/doruktopcu](https://github.com/doruktopcu)
