@@ -72,11 +72,6 @@
   <!-- Header Navigation -->
   <header class="header">
     <div class="container header-inner">
-      <a href="#" class="logo">
-        <div class="logo-badge">DT</div>
-        <span>Doruk Topcu</span>
-      </a>
-
       <nav>
         <ul class="nav-menu">
           <li><a href="#about" class="nav-link active">About</a></li>
@@ -94,6 +89,9 @@
         </button>
         <button id="theme-toggle-btn" class="btn btn-icon" title="Toggle Light/Dark Theme">
           <i class="fas fa-sun"></i>
+        </button>
+        <button id="mobile-menu-btn" class="btn btn-icon mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
@@ -153,7 +151,7 @@
 
           <div class="hero-visual">
             <div class="profile-card">
-              <div class="profile-avatar-wrapper">
+              <div class="profile-avatar-wrapper" id="profile-avatar-trigger" style="cursor: pointer;" title="Click to view full profile picture">
                 <div class="profile-avatar-glow"></div>
                 <img src="images/profile-picture.jpeg" alt="Doruk Topcu Profile" class="profile-avatar-img">
               </div>
@@ -531,6 +529,14 @@
       <button id="btn-copy-bibtex" class="btn btn-primary">
         <i class="fas fa-copy"></i> Copy Citation
       </button>
+    </div>
+  </div>
+
+  <!-- PROFILE IMAGE LIGHTBOX MODAL -->
+  <div id="image-lightbox-modal" class="modal-backdrop">
+    <div class="modal-content image-lightbox-content">
+      <button id="image-lightbox-close" class="modal-close" aria-label="Close modal">&times;</button>
+      <img src="images/profile-picture.jpeg" alt="Doruk Topcu Profile Full" class="lightbox-img">
     </div>
   </div>
 

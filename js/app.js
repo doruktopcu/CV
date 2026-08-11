@@ -231,37 +231,44 @@ const CERTIFICATIONS_DATA = [
     title: "Claude Certified Architect - Foundations",
     provider: "Anthropic",
     date: "Issued Jun 2026 · Expires Jun 2027",
-    category: "ai"
+    category: "ai",
+    credlyId: "7ae4b821-8edc-4d40-811d-4396f29df51e",
+    credentialUrl: "https://www.credly.com/badges/7ae4b821-8edc-4d40-811d-4396f29df51e/public_url"
   },
   {
     title: "Google Cloud Digital Leader",
     provider: "Google",
     date: "Issued May 2026 · Expires May 2029",
-    category: "cloud"
+    category: "cloud",
+    credlyId: "1b3cc2a1-985b-4f07-9427-b82588cce87c"
   },
   {
     title: "AWS Certified Machine Learning – Specialty",
     provider: "Amazon Web Services (AWS)",
     date: "Issued Aug 2025",
-    category: "aws"
+    category: "aws",
+    credlyId: "d69137e2-59d9-4847-987d-1ed79c8a7c08"
   },
   {
     title: "AWS Certified Solutions Architect – Associate",
     provider: "Amazon Web Services (AWS)",
     date: "Issued Aug 2023 · ID: YMX5G031WM4EQ6C9",
-    category: "aws"
+    category: "aws",
+    credlyId: "f6a41f4d-8bf2-466a-89ee-42c7375965c2"
   },
   {
     title: "AWS Partner: Generative AI Essentials",
     provider: "Amazon Web Services (AWS)",
     date: "Issued Apr 2025",
-    category: "aws"
+    category: "aws",
+    credlyId: "e4786224-fa0f-48a0-b6fb-1955b422efd3"
   },
   {
     title: "AWS Certified Cloud Practitioner",
     provider: "Amazon Web Services (AWS)",
     date: "Issued Jun 2023 · ID: 4VCKYD1CV1V4QRKL",
-    category: "aws"
+    category: "aws",
+    credlyId: "6bf63baa-b381-4214-940e-8f119285bb32"
   },
   {
     title: "NestJS Zero to Hero - Modern Back-End",
@@ -533,17 +540,46 @@ function renderCertifications() {
   if (!certContainer) return;
 
   certContainer.innerHTML = CERTIFICATIONS_DATA.map(cert => `
-    <div class="cert-card">
-      <div class="cert-icon">
-        <i class="${getCertIcon(cert.category)}"></i>
-      </div>
+    <div class="cert-card ${cert.credlyId ? 'has-credly' : ''}">
+      ${cert.credlyId ? `
+        <div class="credly-badge-wrapper">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="${cert.credlyId}" data-share-badge-host="https://www.credly.com"></div>
+        </div>
+      ` : `
+        <div class="cert-icon">
+          <i class="${getCertIcon(cert.category)}"></i>
+        </div>
+      `}
       <div class="cert-details">
         <h4>${cert.title}</h4>
         <div class="cert-provider">${cert.provider}</div>
         <div class="cert-date">${cert.date}</div>
+        ${cert.credentialUrl ? `
+          <a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+            Verify Credential <i class="fas fa-external-link-alt"></i>
+          </a>
+        ` : (cert.credlyId ? `
+          <a href="https://www.credly.com/badges/${cert.credlyId}/public_url" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+            Verify Credential <i class="fas fa-external-link-alt"></i>
+          </a>
+        ` : '')}
       </div>
     </div>
   `).join('');
+
+  loadCredlyEmbedScript();
+}
+
+function loadCredlyEmbedScript() {
+  const existing = document.getElementById('credly-embed-script');
+  if (existing) existing.remove();
+
+  const script = document.createElement('script');
+  script.id = 'credly-embed-script';
+  script.type = 'text/javascript';
+  script.async = true;
+  script.src = 'https://cdn.credly.com/assets/utilities/embed.js';
+  document.body.appendChild(script);
 }
 
 function getCertIcon(cat) {
@@ -762,6 +798,31 @@ function setupBibtexModal() {
   }
 }
 
+function setupProfileImageModal() {
+  const trigger = document.getElementById('profile-avatar-trigger');
+  const imgEl = document.querySelector('.profile-avatar-img');
+  const modal = document.getElementById('image-lightbox-modal');
+  const closeBtn = document.getElementById('image-lightbox-close');
+
+  const openModal = () => {
+    if (modal) modal.classList.add('active');
+  };
+
+  if (trigger) trigger.addEventListener('click', openModal);
+  if (imgEl) imgEl.addEventListener('click', openModal);
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+  }
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.classList.contains('image-lightbox-content')) {
+        modal.classList.remove('active');
+      }
+    });
+  }
+}
+
 function setupCopyEmail() {
   // Contact section disabled
 }
@@ -822,6 +883,34 @@ function updateThemeIcon(theme) {
   }
 }
 
+function setupMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('mobile-active');
+      const icon = menuBtn.querySelector('i');
+      if (icon) {
+        if (navMenu.classList.contains('mobile-active')) {
+          icon.className = 'fas fa-times';
+        } else {
+          icon.className = 'fas fa-bars';
+        }
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('mobile-active');
+        const icon = menuBtn.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
+      });
+    });
+  }
+}
+
 // ==========================================================================
 // 10. ACTIVE NAVIGATION HIGHLIGHT ON SCROLL
 // ==========================================================================
@@ -869,6 +958,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupTimelineTabs();
   new CommandPalette();
   setupBibtexModal();
+  setupProfileImageModal();
+  setupMobileMenu();
   setupCopyEmail();
   setupThemeToggler();
   setupScrollSpy();
