@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://doruktopcu.github.io/CV/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://doruktopcu.github.io/CV/images/profile-picture.jpeg</image:loc>
+      <image:title>Doruk Topcu - Portfolio &amp; Interactive CV</image:title>
+      <image:caption>Doruk Topcu - PhD Candidate, Machine Learning Researcher, Full-Stack QA Lead &amp; Chrome Extension Developer</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://doruktopcu.github.io/CV/index.html</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

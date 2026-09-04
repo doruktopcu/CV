@@ -8,6 +8,78 @@
 // 1. DATA REPOSITORIES (Full Master Document Content)
 // ==========================================================================
 const PROJECTS_DATA = [
+  // Chrome Extensions
+  {
+    id: "ext-coffee-brew-tracker",
+    title: "Coffee Brew Tracker",
+    category: "extensions",
+    categoryLabel: "Chrome Extension",
+    version: "1.0.0",
+    description: "Personal brewing companion for home baristas and coffee enthusiasts. Features 10+ brewing methods (V60, AeroPress, French Press, Chemex, Moka Pot), 1-click expert recipe presets, automatic golden brew ratio calculator, precision bloom timer with audio alerts, custom recipe logs, and 100% offline local storage.",
+    tags: ["Chrome Extension", "Interactive Timer", "Coffee Brewing", "Local Storage", "Productivity"],
+    storeUrl: "https://chromewebstore.google.com/detail/lhmdbaeiipojbmbmockjenddjjbiifjb?utm_source=item-share-cb"
+  },
+  {
+    id: "ext-deep-hour",
+    title: "DeepHour",
+    category: "extensions",
+    categoryLabel: "Chrome Extension",
+    version: "1.0.0",
+    description: "Privacy-first study and deep work timer running 100% locally with zero tracking. Features 7 scientific focus methods (Classic Pomodoro, 50/10, 90/20 Deep Work, 52/17, Flowtime, Animedoro, Study & Recall), custom interval builder, persistent background clock, goal tracking, and 12-week consistency heatmaps.",
+    tags: ["Chrome Extension", "Deep Work", "Pomodoro & Flowtime", "Analytics", "Privacy-First"],
+    storeUrl: "https://chromewebstore.google.com/detail/deep-hour/fokflkiijjopnkfhjpbecfjpoigepgie"
+  },
+  {
+    id: "ext-personalized-profiler",
+    title: "Personalized Profiler",
+    category: "extensions",
+    categoryLabel: "Chrome Extension",
+    version: "1.2.0",
+    description: "100% client-side browsing persona and privacy analytics engine. Computes 10 data-driven browsing personas, renders exportable canvas cards, analyzes 24x7 activity heatmaps and digital wellbeing trends, inspects cookie security, and synthesizes paste-ready AI context profiles for Claude & ChatGPT—with zero network requests.",
+    tags: ["Chrome Extension", "Local Analytics", "Privacy Inspector", "Canvas Export", "AI Context Generator"],
+    storeUrl: "https://chromewebstore.google.com/detail/personalized-profiler/llnkcaooodbcdeinpfgcbjaehblfaflf"
+  },
+  {
+    id: "ext-bookworm",
+    title: "BookWorm",
+    category: "extensions",
+    categoryLabel: "Chrome Extension",
+    version: "1.0.0",
+    description: "Universal 1-click book-saving and personal reading list manager. Automatically extracts book titles, authors, cover art, and descriptions across any bookstore or library catalog into customizable shelves (Want to Read, Currently Reading, Favorites), with manual entry options and JSON backup/export.",
+    tags: ["Chrome Extension", "Book Tracking", "Web Scraper", "Local Storage", "Privacy"],
+    storeUrl: "https://chromewebstore.google.com/detail/jlfijhekfaidjomhknecaonjdakpdaan?utm_source=item-share-cb"
+  },
+  {
+    id: "ext-number-theory-lab",
+    title: "Number Theory Lab",
+    category: "extensions",
+    categoryLabel: "Chrome Extension",
+    version: "1.0.0",
+    description: "Interactive computational suite for elementary number theory featuring arbitrary-precision arithmetic. Includes 9 step-by-step mathematical solvers (Extended Euclidean GCD/LCM, Linear Diophantine, Congruences, CRT, Euler's φ & Möbius μ, Prime Factorization, Legendre Symbol), sequence formula workbench, and searchable theorem guide.",
+    tags: ["Chrome Extension", "Number Theory", "Exact Math", "Arbitrary-Precision", "Interactive Solvers"],
+    storeUrl: "https://chromewebstore.google.com/detail/cidhiojfmleajnapbmdhnopendepaigj?utm_source=item-share-cb"
+  },
+  {
+    id: "ext-badgesaver-credly",
+    title: "BadgeSaver for Credly",
+    category: "extensions",
+    categoryLabel: "Chrome Extension",
+    version: "1.0.0",
+    description: "100% offline digital credential manager and wishlist for Credly certifications. Features 1-click badge & public wallet bulk saver with high-res artwork, customizable learning path builder with live progress tracking, auto-domain categorization (Cloud, Cybersecurity, AI/ML, DevOps), and JSON/CSV/Markdown export.",
+    tags: ["Chrome Extension", "Credly", "Certifications", "Career Roadmaps", "Markdown Export"],
+    storeUrl: "https://chromewebstore.google.com/detail/mnfoakgnggceojadogcechdoohfancnd?utm_source=item-share-cb"
+  },
+  {
+    id: "ext-eye-health-tracker",
+    title: "EyeHealthTracker",
+    category: "extensions",
+    categoryLabel: "Chrome Extension",
+    version: "1.1.1",
+    description: "Ergonomic wellness extension combating digital eye strain with guided 20-20-20 rule micro-break reminders, interactive 20-second break timer, customizable daily eye-care exercise habits, activity calendar tracking, high-DPI full-screen desktop mode, and an educational Eye Wiki.",
+    tags: ["Chrome Extension", "Health & Wellness", "20-20-20 Rule", "Break Reminder", "Habit Tracker"],
+    storeUrl: "https://chromewebstore.google.com/detail/ghfkfobnmmhpaonmjmokbaalgdhbinbb?utm_source=item-share-cb"
+  },
+
   // ML / Bioinformatics
   {
     id: "asap-ml",
@@ -495,7 +567,7 @@ class ProjectsEngine {
   render() {
     const filtered = PROJECTS_DATA.filter(project => {
       const matchesCategory = (this.currentCategory === 'all') || (project.category === this.currentCategory);
-      const searchHaystack = `${project.title} ${project.description} ${project.tags.join(' ')}`.toLowerCase();
+      const searchHaystack = `${project.title} ${project.description} ${project.tags.join(' ')} ${project.categoryLabel}`.toLowerCase();
       const matchesSearch = !this.currentSearch || searchHaystack.includes(this.currentSearch);
       return matchesCategory && matchesSearch;
     });
@@ -510,10 +582,15 @@ class ProjectsEngine {
       return;
     }
 
-    this.gridContainer.innerHTML = filtered.map(project => `
+    this.gridContainer.innerHTML = filtered.map(project => {
+      const isExtension = project.category === 'extensions' || !!project.storeUrl;
+      return `
       <div class="project-card">
         <div>
-          <span class="project-category-badge">${project.categoryLabel}</span>
+          <div class="project-card-header">
+            <span class="project-category-badge ${isExtension ? 'badge-extension' : ''}">${project.categoryLabel}</span>
+            ${project.version ? `<span class="project-version-badge"><i class="fas fa-code-branch"></i> v${project.version}</span>` : ''}
+          </div>
           <h3 class="project-title">${project.title}</h3>
           <p class="project-desc">${project.description}</p>
         </div>
@@ -522,13 +599,20 @@ class ProjectsEngine {
             ${project.tags.map(t => `<span class="tag">${t}</span>`).join('')}
           </div>
           <div class="project-footer">
-            <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link">
-              <i class="fab fa-github"></i> Repository <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
-            </a>
+            ${isExtension ? `
+              <a href="${project.storeUrl || project.github}" target="_blank" rel="noopener noreferrer" class="project-link project-link-store">
+                <i class="fab fa-chrome"></i> Chrome Web Store <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+              </a>
+            ` : `
+              <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link">
+                <i class="fab fa-github"></i> Repository <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+              </a>
+            `}
           </div>
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   }
 }
 
@@ -709,11 +793,12 @@ class CommandPalette {
     // Projects
     PROJECTS_DATA.forEach(p => {
       if (!q || p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q) || p.tags.some(t => t.toLowerCase().includes(q))) {
+        const isExt = p.category === 'extensions' || !!p.storeUrl;
         items.push({
           title: p.title,
           type: `Project (${p.categoryLabel})`,
-          icon: "fa-laptop-code",
-          action: () => { window.open(p.github, '_blank'); this.close(); }
+          icon: isExt ? "fa-puzzle-piece" : "fa-laptop-code",
+          action: () => { window.open(p.storeUrl || p.github, '_blank'); this.close(); }
         });
       }
     });
