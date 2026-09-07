@@ -82,24 +82,6 @@ const PROJECTS_DATA = [
 
   // ML / Bioinformatics
   {
-    id: "asap-ml",
-    title: "ASAP-ML: Antibiogram Prediction",
-    category: "bioinformatics",
-    categoryLabel: "ML & Bioinformatics",
-    description: "Evaluated 10 Machine Learning algorithms on bacterial data from ARDB, CARD, and NCBI Pathogen Browser for antimicrobial resistance prediction. Published in IEEE TCBB (2026).",
-    tags: ["Python", "Machine Learning", "Bioinformatics", "IEEE TCBB", "Scikit-Learn"],
-    github: "https://github.com/doruktopcu/ASAP-Antibiotic-Susceptibility-and-Antibiogram-Prediction"
-  },
-  {
-    id: "asap-llm",
-    title: "ASAP-LLM Interpretation Engine",
-    category: "bioinformatics",
-    categoryLabel: "ML & Bioinformatics",
-    description: "Integrates Large Language Models with ASAP-ML pipeline for improved antibiogram prediction accuracy and biological interpretability.",
-    tags: ["LLM", "Python", "RAG", "Bioinformatics", "PyTorch"],
-    github: "https://github.com/doruktopcu/ASAP-LLM"
-  },
-  {
     id: "missvarpath",
     title: "MissVarPath Missense Predictor",
     category: "bioinformatics",
@@ -107,24 +89,6 @@ const PROJECTS_DATA = [
     description: "Missense variant pathogenicity predictor utilizing OpenCravat and ClinVar data pipelines for genomic mutation impact scoring.",
     tags: ["Genomics", "ClinVar", "OpenCravat", "Python", "Variant Analysis"],
     github: "https://github.com/doruktopcu/MissVarPath-Missense-Detection"
-  },
-  {
-    id: "vadp",
-    title: "VADP - Variant Analysis Pathogen Detection",
-    category: "bioinformatics",
-    categoryLabel: "ML & Bioinformatics",
-    description: "Automated variant analysis framework for rapid identification and characterization of infectious pathogen strains.",
-    tags: ["Variant Analysis", "Pathogen AI", "Bioinformatics", "Python"],
-    github: "https://github.com/doruktopcu/VADP-Variant-Analysis-Detecting-Pathogens"
-  },
-  {
-    id: "gilm",
-    title: "GILM - Genetics Interpreter Language Model",
-    category: "bioinformatics",
-    categoryLabel: "ML & Bioinformatics",
-    description: "Custom transformer architecture and language modeling applied to genomic sequences and genetics data interpretation.",
-    tags: ["Genomics LLM", "Transformers", "Python", "PyTorch"],
-    github: "https://github.com/doruktopcu/GILM-Genetics-Interpreter-Language-Model"
   },
   {
     id: "brain-tumor",
@@ -140,161 +104,29 @@ const PROJECTS_DATA = [
     title: "Ben Mole Tracker",
     category: "bioinformatics",
     categoryLabel: "ML & Bioinformatics",
-    description: "Computer vision lesion monitor predicting dangerous skin moles and tracking pigment changes over time.",
-    tags: ["Computer Vision", "Health Tech", "Python", "TensorFlow"],
+    description: "Computer vision lesion monitor predicting dangerous skin moles and tracking pigment changes over time.<br><span style=\"display: block; margin-top: 0.35rem; color: var(--accent-cyan); font-weight: 600;\"><i class=\"fas fa-hourglass-half\"></i> Status: In Progress</span>",
+    tags: ["Computer Vision", "Health Tech", "Python", "TensorFlow", "In Progress"],
     github: "https://github.com/doruktopcu/Ben-Mole-Tracker"
   },
 
   // Computer Vision & Perception
   {
+    id: "rrem",
+    title: "RREM: Real-time Road Elements Monitor",
+    category: "vision",
+    categoryLabel: "Vision & Perception",
+    description: "Advanced Driver Assistance System (ADAS) leveraging YOLO11 optimized for Apple Silicon (MPS) and NVIDIA CUDA. Delivers real-time alerts across 20 distinct classes (vulnerable road users, animal hazards, infrastructure anomalies like potholes and fire) with multi-zone hazard assessment logic (0.835 mAP@50).",
+    tags: ["YOLO11", "Computer Vision", "ADAS", "Object Detection", "CUDA", "PyTorch"],
+    github: "https://github.com/doruktopcu/RREM-Real-time-Road-Elements-Monitor"
+  },
+  {
     id: "ccskde",
     title: "CCSKDE / Scene-SKDE Traffic Hazard Detection",
     category: "vision",
     categoryLabel: "Vision & Perception",
-    description: "Context-Conditioned Sequential Keypoint Density Estimation for real-time traffic hazard and anomaly forecasting (CMP719).",
+    description: "Context-Conditioned Sequential Keypoint Density Estimation for real-time traffic hazard and anomaly forecasting.",
     tags: ["Computer Vision", "Traffic AI", "Keypoint Estimation", "PyTorch"],
     github: "https://github.com/doruktopcu/CCSKDE"
-  },
-  {
-    id: "carla-iot",
-    title: "CARLA Simulation IoT Telemetry",
-    category: "vision",
-    categoryLabel: "Vision & Perception",
-    description: "CARLA autonomous driving simulator integrated with real-time IoT telemetry pipelines for cooperative vehicle safety.",
-    tags: ["CARLA", "Autonomous Driving", "IoT", "Python", "C++"],
-    github: "https://github.com/doruktopcu/CARLA_IOT"
-  },
-  {
-    id: "road-satellite",
-    title: "Road SatelLite Monitor",
-    category: "vision",
-    categoryLabel: "Vision & Perception",
-    description: "Satellite and drone aerial imagery vehicle detection, traffic density estimation, and infrastructure tracking.",
-    tags: ["Aerial Vision", "YOLO", "GIS", "Python", "OpenCV"],
-    github: "https://github.com/doruktopcu/Road-SatelLite"
-  },
-  {
-    id: "tsl-v-ai",
-    title: "TSL-V-AI Sign Language Translator",
-    category: "vision",
-    categoryLabel: "Vision & Perception",
-    description: "Real-time Turkish Sign Language recognition system translating live video streams into text and audio.",
-    tags: ["Sign Language AI", "MediaPipe", "OpenCV", "Python"],
-    github: "https://github.com/doruktopcu/TSL-V-AI"
-  },
-  {
-    id: "lip-reader",
-    title: "Visual Speech Lip Reader",
-    category: "vision",
-    categoryLabel: "Vision & Perception",
-    description: "Neural visual speech recognition model transcribing spoken words strictly from mouth motion video sequences.",
-    tags: ["Lip Reading", "Sequence Modeling", "Computer Vision", "PyTorch"],
-    github: "https://github.com/doruktopcu/Lip-Reader"
-  },
-
-  // Web & Full-Stack
-  {
-    id: "snapshot-ai",
-    title: "Snapshot AI Platform (Flatiron Software)",
-    category: "web",
-    categoryLabel: "Web & Full-Stack",
-    description: "Founding developer & QA Lead for enterprise full-stack platform ingesting source control & project management data into LLM RAG pipelines.",
-    tags: ["NestJS", "GraphQL", "React", "TypeScript", "AWS", "LLM RAG"],
-    github: "https://github.com/doruktopcu"
-  },
-  {
-    id: "sahiplendir",
-    title: "Sahiplendir Pet Adoption Platform",
-    category: "web",
-    categoryLabel: "Web & Full-Stack",
-    description: "Live public web application facilitating pet rehoming, adoption listings, and rescue organization outreach.",
-    tags: ["Full-Stack", "JavaScript", "HTML/CSS", "Web App"],
-    github: "https://github.com/doruktopcu/sahiplendir.com"
-  },
-  {
-    id: "universal-clipboard",
-    title: "Plugin Universal Clipboard",
-    category: "web",
-    categoryLabel: "Web & Full-Stack",
-    description: "Cross-device browser extension enabling seamless cloud clipboard synchronization with end-to-end encryption.",
-    tags: ["Browser Extension", "JavaScript", "WebAPI"],
-    github: "https://github.com/doruktopcu/Plugin-Universal-Clipboard"
-  },
-  {
-    id: "digital-headshot",
-    title: "Digital Headshot Contact Exchange",
-    category: "web",
-    categoryLabel: "Web & Full-Stack",
-    description: "NFC and Bluetooth contact sharing application for instant digital business card exchange.",
-    tags: ["WebBluetooth", "NFC", "JavaScript", "Mobile Web"],
-    github: "https://github.com/doruktopcu/Digital-Headshot"
-  },
-
-  // IoT & Simulation
-  {
-    id: "iot-air-quality",
-    title: "IoT Indoor Air Quality Simulator",
-    category: "iot",
-    categoryLabel: "IoT & Simulation",
-    description: "Multi-room indoor air-quality sensor simulation tracking CO2, particulate matter, and humidity across 3 rooms, kitchen, and hallway.",
-    tags: ["IoT", "Sensors", "MQTT", "Python", "Data Viz"],
-    github: "https://github.com/doruktopcu/IoT-Project-1"
-  },
-  {
-    id: "iot-smart-farm",
-    title: "Smart Agriculture Sensor Array",
-    category: "iot",
-    categoryLabel: "IoT & Simulation",
-    description: "Automated farm field sensor network monitoring soil moisture and pH with intelligent dynamic sprinkler actuation.",
-    tags: ["Smart Farming", "IoT", "Telemetry", "Python"],
-    github: "https://github.com/doruktopcu/IoT-Project-2"
-  },
-  {
-    id: "dynamo-fitness",
-    title: "Dynamo Fitness Power Tracking",
-    category: "iot",
-    categoryLabel: "IoT & Simulation",
-    description: "Next-gen IoT telemetry system recording green kinetic energy generated by gym equipment users.",
-    tags: ["NGIoT", "Telemetry", "Clean Tech", "Embedded Systems"],
-    github: "https://github.com/doruktopcu/DynamoFitness-NGIoT-Project"
-  },
-
-  // Security & Games
-  {
-    id: "radaway",
-    title: "RadAway Radiation Monitoring",
-    category: "security",
-    categoryLabel: "Security & Games",
-    description: "Clinical radiation dosage sensor monitoring network with real-time exposure threshold alerts across clinic rooms.",
-    tags: ["Radiation Safety", "IoT Alerting", "Python", "Sensors"],
-    github: "https://github.com/doruktopcu/RadAway"
-  },
-  {
-    id: "virtual-guard",
-    title: "Virtual Guard Anomaly Detector",
-    category: "security",
-    categoryLabel: "Security & Games",
-    description: "CCTV automated surveillance stream analyzer detecting perimeter breaches and workplace hazards.",
-    tags: ["Computer Vision", "Surveillance AI", "YOLO", "Security"],
-    github: "https://github.com/doruktopcu/Virtual-Guard"
-  },
-  {
-    id: "whos-story",
-    title: "Who's Story Narrative Engine",
-    category: "games",
-    categoryLabel: "Security & Games",
-    description: "Interactive narrative game engine featuring dynamic perspective-switching characters and branching choices.",
-    tags: ["Game Dev", "Interactive Story", "JavaScript", "HTML5 Canvas"],
-    github: "https://github.com/doruktopcu/Who-s-Story"
-  },
-  {
-    id: "personalized-npcs",
-    title: "Adaptive Learning NPCs",
-    category: "games",
-    categoryLabel: "Security & Games",
-    description: "Game AI architecture where non-player characters observe player tactical tendencies and adapt strategies dynamically.",
-    tags: ["Game AI", "Reinforcement Learning", "Behavior Trees", "Python"],
-    github: "https://github.com/doruktopcu/Personalized-NPCs"
   }
 ];
 
@@ -361,7 +193,7 @@ const CERTIFICATIONS_DATA = [
     category: "ai"
   },
   {
-    title: "API ve API Testi",
+    title: "API and API Testing",
     provider: "BTK Akademi",
     date: "Issued Jul 2022",
     category: "qa"
@@ -777,8 +609,8 @@ class CommandPalette {
 
     // Navigation section links
     const sections = [
-      { name: "Jump to Publication Spotlight", anchor: "#publication", icon: "fa-book" },
       { name: "Jump to Experience & Education", anchor: "#timeline", icon: "fa-briefcase" },
+      { name: "Jump to Publication Spotlight", anchor: "#publication", icon: "fa-book" },
       { name: "Jump to Interactive Projects", anchor: "#projects", icon: "fa-code-branch" },
       { name: "Jump to Skills Matrix", anchor: "#skills", icon: "fa-layer-group" },
       { name: "Jump to Certifications Gallery", anchor: "#certifications", icon: "fa-certificate" }
@@ -1033,7 +865,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new TypewriterEffect(typewriterEl, [
       "Computer Engineering PhD Candidate @ Hacettepe",
       "Antimicrobial Resistance ML & Bioinformatics Researcher",
-      "Full-Stack QA Lead & Scrum Master (Snapshot AI)",
+      "QA & Scrum Master",
       "AWS Certified Machine Learning Specialist"
     ], 2200);
   }
