@@ -79,6 +79,18 @@ const PROJECTS_DATA = [
     tags: ["Chrome Extension", "Health & Wellness", "20-20-20 Rule", "Break Reminder", "Habit Tracker"],
     storeUrl: "https://chromewebstore.google.com/detail/ghfkfobnmmhpaonmjmokbaalgdhbinbb?utm_source=item-share-cb"
   },
+  {
+    id: "ext-derin-bir-nefes",
+    title: "DerinBirNefes - Breathwork & Mindfulness",
+    category: "extensions",
+    categoryLabel: "Firefox Add-on",
+    version: "1.0.0",
+    description: "Privacy-first breathwork coach and mindful pacer. Features 5 breathing techniques (Physiological Sigh, Box Breathing, 4-7-8, Coherent 5.5s, Awakening 4-2-4), custom rhythm builder, consistency heatmaps, 14-day mindful minutes tracking, and 5 visual themes running 100% locally with zero analytics.",
+    tags: ["Firefox Add-on", "Mindfulness", "Breathwork", "Offline Local Storage", "Privacy-First"],
+    storeUrl: "https://addons.mozilla.org/en-US/firefox/addon/derinbirnefes-breathwork/",
+    storeLabel: "Firefox Add-ons",
+    storeIcon: "fab fa-firefox-browser"
+  },
 
   // ML / Bioinformatics
   {
@@ -433,7 +445,7 @@ class ProjectsEngine {
           <div class="project-footer">
             ${isExtension ? `
               <a href="${project.storeUrl || project.github}" target="_blank" rel="noopener noreferrer" class="project-link project-link-store">
-                <i class="fab fa-chrome"></i> Chrome Web Store <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+                <i class="${project.storeIcon || (project.storeUrl && project.storeUrl.includes('mozilla.org') ? 'fab fa-firefox-browser' : 'fab fa-chrome')}"></i> ${project.storeLabel || (project.storeUrl && project.storeUrl.includes('mozilla.org') ? 'Firefox Add-ons' : 'Chrome Web Store')} <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
               </a>
             ` : `
               <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link">
