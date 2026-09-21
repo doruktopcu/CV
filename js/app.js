@@ -101,8 +101,7 @@ const PROJECTS_DATA = [
     tags: ["Firefox Add-on", "QA & Test Assist", "Playwright & Cypress", "Web Vitals", "API Mocks", "Privacy-First"],
     storeUrl: "https://addons.mozilla.org/en-US/firefox/addon/omniqa-testing-companion/",
     storeLabel: "Firefox Add-ons",
-    storeIcon: "fab fa-firefox-browser",
-    github: "https://github.com/doruktopcu/QA-Testing-Helper-Mozilla-Addon"
+    storeIcon: "fab fa-firefox-browser"
   },
 
   // ML / Bioinformatics
