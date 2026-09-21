@@ -91,6 +91,19 @@ const PROJECTS_DATA = [
     storeLabel: "Firefox Add-ons",
     storeIcon: "fab fa-firefox-browser"
   },
+  {
+    id: "ext-omniqa-testing-companion",
+    title: "OmniQA - All-Inclusive QA & Test Companion",
+    category: "extensions",
+    categoryLabel: "Firefox Add-on",
+    version: "1.2.0",
+    description: "All-in-one local-first QA & testing toolkit for QA engineers, testers, and developers. Features annotated screenshot capture, screen recorder with marker timeline, 1-click Markdown bug dossiers, 58-device responsive matrix with synced scroll/input, 40+ check QA Advisor (accessibility, UX, SEO, security, Web Vitals), zero-backend API workbench & mocks, form fuzzer, and multi-framework test recorder (Playwright, Cypress, Selenium, WebdriverIO). 100% client-side with zero tracking.",
+    tags: ["Firefox Add-on", "QA & Test Assist", "Playwright & Cypress", "Web Vitals", "API Mocks", "Privacy-First"],
+    storeUrl: "https://addons.mozilla.org/en-US/firefox/addon/omniqa-testing-companion/",
+    storeLabel: "Firefox Add-ons",
+    storeIcon: "fab fa-firefox-browser",
+    github: "https://github.com/doruktopcu/QA-Testing-Helper-Mozilla-Addon"
+  },
 
   // ML / Bioinformatics
   {
@@ -447,6 +460,11 @@ class ProjectsEngine {
               <a href="${project.storeUrl || project.github}" target="_blank" rel="noopener noreferrer" class="project-link project-link-store">
                 <i class="${project.storeIcon || (project.storeUrl && project.storeUrl.includes('mozilla.org') ? 'fab fa-firefox-browser' : 'fab fa-chrome')}"></i> ${project.storeLabel || (project.storeUrl && project.storeUrl.includes('mozilla.org') ? 'Firefox Add-ons' : 'Chrome Web Store')} <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
               </a>
+              ${project.github && project.storeUrl ? `
+                <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <i class="fab fa-github"></i> Repository <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>
+                </a>
+              ` : ''}
             ` : `
               <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link">
                 <i class="fab fa-github"></i> Repository <i class="fas fa-external-link-alt" style="font-size: 0.75rem;"></i>

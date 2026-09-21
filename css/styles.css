@@ -985,6 +985,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   padding-top: 1rem;
   border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .project-link {

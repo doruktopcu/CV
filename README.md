@@ -13,7 +13,7 @@ Welcome to my personal interactive portfolio and academic CV page, optimized for
 - **Command Palette (`Ctrl + K` / `Cmd + K`)**: Instant search overlay allowing visitors to search across projects, skills, certifications, and publications.
 - **Featured Journal Publication**: IEEE TCBB 2026 paper (*ASAP-ML: Antibiotic Susceptibility and Antibiogram Prediction With Machine Learning Methods*) with DOI links and one-click BibTeX citation copy.
 - **Dual Interactive Timeline**: Switch seamlessly between Work Experience (Flatiron Software QA & Scrum Master) and Academic Degrees (PhD, MS, Associate Degree, Mathematics BS).
-- **Categorized Projects Showcase**: Real-time keyword search and category filtering for personal GitHub projects and published Chrome extensions (Chrome Extensions, ML & Bioinformatics, Vision & Perception).
+- **Categorized Projects Showcase**: Real-time keyword search and category filtering for personal GitHub projects and published browser extensions (Chrome Extensions, Firefox Add-ons, ML & Bioinformatics, Vision & Perception).
 - **28+ Industry Certifications Gallery**: AWS Machine Learning Specialty, Claude Certified Architect, Google Cloud Digital Leader, AWS Solutions Architect Associate, Meta Front-End, and more.
 
 ---
@@ -35,3 +35,5 @@ Then visit `http://localhost:8000`.
 
 - **LinkedIn**: [linkedin.com/in/doruktopcu](https://www.linkedin.com/in/doruktopcu/)
 - **GitHub**: [github.com/doruktopcu](https://github.com/doruktopcu)
+- **Firefox Add-ons**: [addons.mozilla.org/user/20143361](https://addons.mozilla.org/en-US/firefox/user/20143361/)
+- **Chrome Web Store**: [chromewebstore.google.com/search/mentalcrafts](https://chromewebstore.google.com/search/mentalcrafts)
